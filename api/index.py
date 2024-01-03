@@ -59,7 +59,7 @@ def jsonify(data: object, status_code: int = 200) -> Tuple[Response, int]:
 
 @app.route('/')
 def main():
-    return 'Connected'
+  return 'Connected'
 
 @app.route('/cities')
 def fetch_cities():
@@ -140,7 +140,7 @@ def process_alerts_t():
       if get_alert_type() == '':
         set_alert_type(str(red_alert['title']))
         set_timestamp(datetime.now(tz))
-      cities = get_cities()
+        cities = get_cities()
       [cities.append(city) for city in red_alert['data'] if city not in cities]
       set_cities(cities)
       return
