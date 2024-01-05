@@ -42,7 +42,6 @@ def rotate_proxy():
 def get_proxy():
   return proxies[proxy_index]
 
-tl = Timeloop()
 
 alert_type: str = ''
 cities: List[str] = []
