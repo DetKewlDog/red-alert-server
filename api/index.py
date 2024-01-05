@@ -4,7 +4,7 @@ from flask_cors import CORS
 import json, os, requests
 from datetime import datetime, timedelta
 
-from timeloop import Timeloop
+from apscheduler.schedulers.background import BackgroundScheduler
 from supabase import create_client, Client
 from dotenv import load_dotenv
 from colorama import Fore
@@ -127,7 +127,6 @@ def create_alert_bundle():
   set_timestamp(None)
 
 
-@tl.job(interval=timedelta(seconds=1))
 def process_alerts_t():
   try:
     r = requests.get(API_URL, proxies=get_proxy())
@@ -157,6 +156,8 @@ def process_alerts_t():
 
 
 if __name__ == '__main__':
-  tl.start(block=False)
+  scheduler = BackgroundScheduler()
+  job = scheduler.add_job(process_alerts_t, 'interval', seconds=1)
+  scheduler.start()
   app.run(host="0.0.0.0", port=8080, debug=True)
 
