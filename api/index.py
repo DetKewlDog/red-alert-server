@@ -4,6 +4,8 @@ from flask_cors import CORS
 import json, os, requests
 from datetime import datetime, timedelta
 
+from overpy import Overpass
+
 from dotenv import load_dotenv
 
 from typing_extensions import Tuple
@@ -13,6 +15,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
 CORS(app)
+api = Overpass()
 
 load_dotenv()
 
@@ -64,11 +67,7 @@ def geocode(city: str):
 
 @app.route('/geometry')
 def geometry():
-  data = request.args.get('data')
-  r = requests.get(f'https://lz4.overpass-api.de/api/interpreter', proxies=get_proxy(), params=('data', data))
-  response = make_response(r.text)
-  response.headers['Content-Type'] = 'application/json'
-  return response, r.status_code
+  return jsonify(api(request.args.get('data')), 200)
 
 
 @app.route('/history')

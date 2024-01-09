@@ -27,7 +27,6 @@ pydantic-core==2.14.6
 pyOpenSSL==23.3.0
 python-dateutil==2.8.2
 python-dotenv==1.0.0
-pytz==2023.3.post1
 realtime==1.0.2
 requests==2.31.0
 six==1.16.0
@@ -36,9 +35,8 @@ storage3==0.7.0
 StrEnum==0.4.15
 supabase==2.3.0
 supafunc==0.3.1
-timeloop==1.0.2
 typing-extensions==4.9.0
 urllib3==2.1.0
 websockets==11.0.3
 werkzeug==3.0.1
-APScheduler==3.10.4
+overpy==0.7.0
