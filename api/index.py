@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 from typing_extensions import Tuple
 
-import urllib3, urllib.parse
+import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
@@ -70,8 +70,9 @@ def geometry(city_id: int):
 
 
 @app.route('/history')
-def history():
-  r = requests.get('https://api.tzevaadom.co.il/alerts-history/?', proxies=get_proxy())
+@app.route('/history/<id>')
+def history(id=''):
+  r = requests.get(f'https://api.tzevaadom.co.il/alerts-history/{"" if id == "" else f"/{id}"}', proxies=get_proxy())
   response = make_response(r.text)
   response.headers['Content-Type'] = 'application/json'
   return response, r.status_code
