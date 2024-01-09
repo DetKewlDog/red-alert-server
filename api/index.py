@@ -1,4 +1,4 @@
-from flask import Flask, Response, make_response, send_file
+from flask import Flask, Response, make_response, send_file, request
 from flask_cors import CORS
 
 import json, os, requests
@@ -46,7 +46,6 @@ def main():
 def fetch_cities():
   return send_file('./cities.json')
 
-
 @app.route('/realtime')
 def realtime():
   r = requests.get('https://www.kore.co.il/redAlert.json', proxies=get_proxy())
@@ -58,6 +57,15 @@ def realtime():
 @app.route('/geocode/<city>')
 def geocode(city: str):
   r = requests.get(f'https://geocode.maps.co/search?q={city}&api_key={GEOCODE_API_KEY}', proxies=get_proxy())
+  response = make_response(r.text)
+  response.headers['Content-Type'] = 'application/json'
+  return response, r.status_code
+
+
+@app.route('/geometry')
+def geometry():
+  data = request.args.get('data')
+  r = requests.get(f'https://lz4.overpass-api.de/api/interpreter', proxies=get_proxy(), params=('data', data))
   response = make_response(r.text)
   response.headers['Content-Type'] = 'application/json'
   return response, r.status_code
