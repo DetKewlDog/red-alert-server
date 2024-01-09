@@ -72,7 +72,7 @@ def geometry(city_id: int):
 @app.route('/history')
 @app.route('/history/<id>')
 def history(id=''):
-  r = requests.get(f'https://api.tzevaadom.co.il/alerts-history/{"" if id == "" else f"/{id}"}', proxies=get_proxy())
+  r = requests.get(f'https://api.tzevaadom.co.il/alerts-history/{"" if id == "" else f"/id/{id}"}', proxies=get_proxy())
   response = make_response(r.text)
   response.headers['Content-Type'] = 'application/json'
   return response, r.status_code
