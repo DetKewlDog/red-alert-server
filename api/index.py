@@ -61,18 +61,9 @@ def geocode(city: str):
   return response, r.status_code
 
 
-@app.route('/geometry/<city>')
-def geometry(city: str):
-  city = urllib.parse.unquote_plus(city, encoding='utf-8', errors='replace')
-  query = f'''[out:json];
-(
-rel["name"="{city}"]["place"];
-area["name"="{city}"]["place"];
-way["name"="{city}"]["place"];
-node["name"="{city}"]["place"];
-);
-out geom;'''
-  r = requests.get('https://lz4.overpass-api.de/api/interpreter', proxies=get_proxy(), params={'data': query})
+@app.route('/geometry/<city_id>')
+def geometry(city_id: int):
+  r = requests.get(f'https://www.tzevaadom.co.il/static/polygons.json?id={city_id}', proxies=get_proxy())
   response = make_response(r.text)
   response.headers['Content-Type'] = 'application/json'
   return response, r.status_code
