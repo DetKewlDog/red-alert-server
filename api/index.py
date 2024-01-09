@@ -1,10 +1,7 @@
-from flask import Flask, Response, make_response, send_file, request
+from flask import Flask, Response, make_response, send_file
 from flask_cors import CORS
 
 import json, os, requests
-from datetime import datetime, timedelta
-
-from overpy import Overpass
 
 from dotenv import load_dotenv
 
@@ -15,7 +12,6 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
 CORS(app)
-api = Overpass()
 
 load_dotenv()
 
@@ -75,7 +71,10 @@ way["name"="{city}"]["place"];
 node["name"="{city}"]["place"];
 );
 out geom;'''
-  return jsonify(api.query(query), 200)
+  r = requests.get('https://lz4.overpass-api.de/api/interpreter', proxies=get_proxy(), params={'data': query})
+  response = make_response(r.text)
+  response.headers['Content-Type'] = 'application/json'
+  return response, r.status_code
 
 
 @app.route('/history')
