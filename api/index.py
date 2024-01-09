@@ -67,7 +67,7 @@ def geocode(city: str):
 
 @app.route('/geometry')
 def geometry():
-  return jsonify(api(request.args.get('data')), 200)
+  return jsonify(api.query(request.args.get('data')), 200)
 
 
 @app.route('/history')
