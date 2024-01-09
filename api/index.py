@@ -71,6 +71,7 @@ way["name"="{city}"]["place"];
 node["name"="{city}"]["place"];
 );
 out geom;'''
+  print(city)
   r = requests.get('https://lz4.overpass-api.de/api/interpreter', proxies=get_proxy(), params={'data': query})
   response = make_response(r.text)
   response.headers['Content-Type'] = 'application/json'
