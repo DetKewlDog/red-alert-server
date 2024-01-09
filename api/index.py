@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 
 from typing_extensions import Tuple
 
-import urllib3
+import urllib3, urllib.parse
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
@@ -63,6 +63,7 @@ def geocode(city: str):
 
 @app.route('/geometry/<city>')
 def geometry(city: str):
+  city = urllib.parse.unquote_plus(city, encoding='utf-8', errors='replace')
   query = f'''[out:json];
 (
 rel["name"="{city}"]["place"];
@@ -71,7 +72,6 @@ way["name"="{city}"]["place"];
 node["name"="{city}"]["place"];
 );
 out geom;'''
-  print(city)
   r = requests.get('https://lz4.overpass-api.de/api/interpreter', proxies=get_proxy(), params={'data': query})
   response = make_response(r.text)
   response.headers['Content-Type'] = 'application/json'
