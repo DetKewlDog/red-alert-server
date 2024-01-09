@@ -65,11 +65,17 @@ def geocode(city: str):
   return response, r.status_code
 
 
-@app.route('/geometry')
-def geometry():
-  data = request.args.get('data')
-  print(data)
-  return jsonify(api.query(data), 200)
+@app.route('/geometry/<city>')
+def geometry(city: str):
+  query = f'''[out:json];
+(
+rel["name"="{city}"]["place"];
+area["name"="{city}"]["place"];
+way["name"="{city}"]["place"];
+node["name"="{city}"]["place"];
+);
+out geom;'''
+  return jsonify(api.query(query), 200)
 
 
 @app.route('/history')
