@@ -72,7 +72,7 @@ def history(id=''):
 @app.route('/dev/random')
 @app.route('/dev/random/<int:area>')
 def random_cities(area = -1):
-  with open('./cities.json', 'r') as f:
+  with open('api/cities.json', 'r', encoding='utf8') as f:
     cities = json.loads(f.read())
 
   city_names = [city for city, data in cities.items() if data['area'] == area or area == -1]
@@ -92,7 +92,7 @@ def random_cities(area = -1):
 @app.route('/dev/all')
 @app.route('/dev/all/<int:area>')
 def all_cities(area = -1):
-  with open('./cities.json', 'r') as f:
+  with open('api/cities.json', 'r', encoding='utf8') as f:
     cities = json.loads(f.read())
 
   return jsonify({
