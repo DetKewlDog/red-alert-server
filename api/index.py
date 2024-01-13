@@ -61,6 +61,13 @@ def geocode(city: str):
   return response, r.status_code
 
 
+@app.route('/geometry')
+def geometry():
+  r = requests.get(f'https://www.tzevaadom.co.il/static/polygons.json', proxies=get_proxy())
+  response = make_response(r.text)
+  response.headers['Content-Type'] = 'application/json'
+  return response, r.status_code
+
 @app.route('/geometry/<city_id>')
 def geometry(city_id: int):
   r = requests.get(f'https://www.tzevaadom.co.il/static/polygons.json?id={city_id}', proxies=get_proxy())
