@@ -1,7 +1,7 @@
 from flask import Flask, Response, make_response, send_file
 from flask_cors import CORS
 
-import json, os, requests
+import json, os, requests, random
 
 from dotenv import load_dotenv
 
@@ -68,6 +68,40 @@ def geometry():
 def history(id=''):
   id = '' if id == '' else f'/id/{id}'
   return relay_request(f'https://api.tzevaadom.co.il/alerts-history/{id}')
+
+@app.route('/dev/random')
+@app.route('/dev/random/<int:area>')
+def random_cities(area = -1):
+  with open('./cities.json', 'r') as f:
+    cities = json.loads(f.read())
+
+  city_names = [city for city, data in cities.items() if data['area'] == area or area == -1]
+
+  amount = random.randint(0, len(city_names))
+  if amount == 0:
+    return jsonify(None)
+
+  return jsonify({
+    'id': 1,
+    'cat': area,
+    'title': 'Rockets',
+    'data': random.sample(city_names, amount),
+    'desc': 'Enter a shelter and remain in it for 10 minutes'
+  })
+
+@app.route('/dev/all')
+@app.route('/dev/all/<int:area>')
+def all_cities(area = -1):
+  with open('./cities.json', 'r') as f:
+    cities = json.loads(f.read())
+
+  return jsonify({
+    'id': 1,
+    'cat': area,
+    'title': 'Rockets',
+    'data': [city for city, data in cities.items() if data['area'] == area or area == -1],
+    'desc': 'Enter a shelter and remain in it for 10 minutes'
+  })
 
 
 if __name__ == '__main__':
