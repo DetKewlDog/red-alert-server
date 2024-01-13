@@ -15,27 +15,37 @@ CORS(app)
 
 load_dotenv()
 
-GEOCODE_API_KEY  : str = str(os.environ.get("GEOCODE_API_KEY" ))
 GEONODE_USERNAME : str = str(os.environ.get("GEONODE_USERNAME"))
 GEONODE_PASSWORD : str = str(os.environ.get("GEONODE_PASSWORD"))
 GEONODE_DNS      : str = str(os.environ.get("GEONODE_DNS"     ))
 
-proxies = [{ 'http': f'http://{GEONODE_USERNAME}:{GEONODE_PASSWORD}@{GEONODE_DNS }:{i}' } for i in range(11000, 11011)]
+proxies = [
+  { 'http': f'http://{GEONODE_USERNAME}:{GEONODE_PASSWORD}@{GEONODE_DNS }:{i}' }
+  for i in range(11000, 11011)
+]
 proxy_index = 0
 
 def rotate_proxy():
   global proxy_index
   proxy_index += 1
   proxy_index %= len(proxies)
-  print('Switched to proxy', proxy_index)
+
 def get_proxy():
   return proxies[proxy_index]
 
 
 def jsonify(data: object, status_code: int = 200) -> Tuple[Response, int]:
-  response = make_response(json.dumps(data, indent=4, ensure_ascii=False))
+  return to_json(make_response(json.dumps(data, indent=4, ensure_ascii=False)), status_code)
+
+def to_json(data: str, status_code: int = 200) -> Tuple[Response, int]:
+  response = make_response(data)
   response.headers['Content-Type'] = 'application/json'
   return response, status_code
+
+def relay_request(url):
+  r = requests.get(url, proxies=get_proxy())
+  rotate_proxy()
+  return to_json(r.text, r.status_code)
 
 @app.route('/')
 def main():
@@ -47,44 +57,19 @@ def fetch_cities():
 
 @app.route('/realtime')
 def realtime():
-  r = requests.get('https://www.kore.co.il/redAlert.json', proxies=get_proxy())
-  response = make_response(r.text)
-  response.headers['Content-Type'] = 'application/json'
-  return response, r.status_code
-
-
-@app.route('/geocode/<city>')
-def geocode(city: str):
-  r = requests.get(f'https://geocode.maps.co/search?q={city}&api_key={GEOCODE_API_KEY}', proxies=get_proxy())
-  response = make_response(r.text)
-  response.headers['Content-Type'] = 'application/json'
-  return response, r.status_code
-
+  return relay_request('https://www.kore.co.il/redAlert.json')
 
 @app.route('/geometry')
 def geometry():
-  r = requests.get(f'https://www.tzevaadom.co.il/static/polygons.json', proxies=get_proxy())
-  response = make_response(r.text)
-  response.headers['Content-Type'] = 'application/json'
-  return response, r.status_code
-
-@app.route('/geometry/<city_id>')
-def geometry_id(city_id: int):
-  r = requests.get(f'https://www.tzevaadom.co.il/static/polygons.json?id={city_id}', proxies=get_proxy())
-  response = make_response(r.text)
-  response.headers['Content-Type'] = 'application/json'
-  return response, r.status_code
-
+  return relay_request('https://www.tzevaadom.co.il/static/polygons.json')
 
 @app.route('/history')
 @app.route('/history/<id>')
 def history(id=''):
-  r = requests.get(f'https://api.tzevaadom.co.il/alerts-history/{"" if id == "" else f"/id/{id}"}', proxies=get_proxy())
-  response = make_response(r.text)
-  response.headers['Content-Type'] = 'application/json'
-  return response, r.status_code
+  id = '' if id == '' else f'/id/{id}'
+  return relay_request(f'https://api.tzevaadom.co.il/alerts-history/{id}')
 
 
 if __name__ == '__main__':
-  app.run(host="0.0.0.0", port=8080, debug=True)
+  app.run(host="0.0.0.0", port=8080, debug=False)
 
