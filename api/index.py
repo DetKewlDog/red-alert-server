@@ -69,7 +69,7 @@ def geometry():
   return response, r.status_code
 
 @app.route('/geometry/<city_id>')
-def geometry(city_id: int):
+def geometry_id(city_id: int):
   r = requests.get(f'https://www.tzevaadom.co.il/static/polygons.json?id={city_id}', proxies=get_proxy())
   response = make_response(r.text)
   response.headers['Content-Type'] = 'application/json'
