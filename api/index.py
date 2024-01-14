@@ -1,13 +1,12 @@
 from flask import Flask, Response, make_response, send_file
 from flask_cors import CORS
 
-import json, os, requests, random
-
-from dotenv import load_dotenv
-
+import json, os, requests, random, urllib3
 from typing_extensions import Tuple
+from dotenv import load_dotenv
+from itertools import groupby
+from dateutil import parser
 
-import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
@@ -42,9 +41,13 @@ def to_json(data: str, status_code: int = 200) -> Tuple[Response, int]:
   response.headers['Content-Type'] = 'application/json'
   return response, status_code
 
-def relay_request(url):
+def get(url):
   r = requests.get(url, proxies=get_proxy())
   rotate_proxy()
+  return r
+
+def relay_request(url):
+  r = get(url)
   return to_json(r.text, r.status_code)
 
 @app.route('/')
@@ -68,6 +71,28 @@ def geometry():
 def history(id=''):
   id = '' if id == '' else f'/id/{id}'
   return relay_request(f'https://api.tzevaadom.co.il/alerts-history/{id}')
+
+@app.route('/dev/history')
+def dev_history():
+  r = get('https://www.oref.org.il//Shared/Ajax/GetAlarmsHistory.aspx?lang=he&mode=3')
+  data = json.loads(r.text)
+  key_func = lambda i: i['alertDate']
+
+  def create_alert(data):
+    data = list(data)
+    categories = [i['category_desc'] for i in data]
+    return {
+      'data': [i['data'] for i in data],
+      'title': max(set(categories), key=categories.count),
+    }
+
+  return jsonify({
+    parser.parse(k).strftime("%m/%d/%Y, %H:%M:%S"):create_alert(v)
+    for k, v in groupby(
+      sorted(data, key=key_func, reverse=True), key_func
+    )
+  })
+
 
 @app.route('/dev/random')
 @app.route('/dev/random/<int:area>')
