@@ -41,8 +41,8 @@ def to_json(data: str, status_code: int = 200) -> Tuple[Response, int]:
   response.headers['Content-Type'] = 'application/json'
   return response, status_code
 
-def get(url):
-  r = requests.get(url, proxies=get_proxy())
+def get(url, headers={}):
+  r = requests.get(url, headers=headers, proxies=get_proxy())
   rotate_proxy()
   return r
 
@@ -74,7 +74,12 @@ def history(id=''):
 
 @app.route('/dev/history')
 def dev_history():
-  r = get('https://www.oref.org.il//Shared/Ajax/GetAlarmsHistory.aspx?lang=he&mode=3')
+  headers = {
+    'Referer': 'https://www.oref.org.il/11226-he/pakar.aspx',
+    'X-Requested-With': 'XMLHttpRequest',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36'
+  }
+  r = get('https://www.oref.org.il//Shared/Ajax/GetAlarmsHistory.aspx?lang=he&mode=3', headers=headers)
   try:
     data = json.loads(r.text)
     key_func = lambda i: i['alertDate']
