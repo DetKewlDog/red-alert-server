@@ -75,23 +75,26 @@ def history(id=''):
 @app.route('/dev/history')
 def dev_history():
   r = get('https://www.oref.org.il//Shared/Ajax/GetAlarmsHistory.aspx?lang=he&mode=3')
-  data = json.loads(r.text)
-  key_func = lambda i: i['alertDate']
+  try:
+    data = json.loads(r.text)
+    key_func = lambda i: i['alertDate']
 
-  def create_alert(data):
-    data = list(data)
-    categories = [i['category_desc'] for i in data]
-    return {
-      'data': [i['data'] for i in data],
-      'title': max(set(categories), key=categories.count),
-    }
+    def create_alert(data):
+      data = list(data)
+      categories = [i['category_desc'] for i in data]
+      return {
+        'data': [i['data'] for i in data],
+        'title': max(set(categories), key=categories.count),
+      }
 
-  return jsonify({
-    parser.parse(k).strftime("%m/%d/%Y, %H:%M:%S"):create_alert(v)
-    for k, v in groupby(
-      sorted(data, key=key_func, reverse=True), key_func
-    )
-  })
+    return jsonify({
+      parser.parse(k).strftime("%m/%d/%Y, %H:%M:%S"):create_alert(v)
+      for k, v in groupby(
+        sorted(data, key=key_func, reverse=True), key_func
+      )
+    })
+  except Exception as e:
+    return str(e) + '\n' + r.text
 
 
 @app.route('/dev/random')
