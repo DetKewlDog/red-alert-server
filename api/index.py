@@ -116,7 +116,7 @@ def random_cities(area = -1):
 
   return jsonify({
     'id': 1,
-    'cat': area,
+    'cat': 1,
     'title': 'Rockets',
     'data': random.sample(city_names, amount),
     'desc': 'Enter a shelter and remain in it for 10 minutes'
@@ -130,7 +130,7 @@ def all_cities(area = -1):
 
   return jsonify({
     'id': 1,
-    'cat': area,
+    'cat': 1,
     'title': 'Rockets',
     'data': [city for city, data in cities.items() if data['area'] == area or area == -1],
     'desc': 'Enter a shelter and remain in it for 10 minutes'
