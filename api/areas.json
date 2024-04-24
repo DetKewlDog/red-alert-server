@@ -1,122 +1,212 @@
 {
-    "1": {
-        "name_he": "גליל עליון",
-        "name_en": "Upper Galilee"
-    },
-    "2": {
-        "name_he": "דרום הנגב",
-        "name_en": "Southern Negev"
-    },
-    "3": {
-        "name_he": "שפלת יהודה",
-        "name_en": "Shfelat Yehuda"
-    },
-    "4": {
-        "name_he": "גליל תחתון",
-        "name_en": "Lower Galilee"
-    },
-    "5": {
-        "name_he": "מנשה",
-        "name_en": "Menashe"
-    },
-    "6": {
-        "name_he": "קו העימות",
-        "name_en": "Confrontation Line"
-    },
-    "7": {
-        "name_he": "לכיש",
-        "name_en": "Lakhish"
-    },
-    "9": {
-        "name_he": "שרון",
-        "name_en": "Sharon"
-    },
-    "10": {
-        "name_he": "דרום הגולן",
-        "name_en": "Southern Golan"
-    },
-    "11": {
-        "name_he": "שומרון",
-        "name_en": "Samaria"
-    },
-    "12": {
-        "name_he": "ים המלח",
-        "name_en": "Dead Sea"
-    },
-    "13": {
-        "name_he": "עוטף עזה",
-        "name_en": "Gaza Envelope"
-    },
-    "14": {
-        "name_he": "יהודה",
-        "name_en": "Judea"
-    },
-    "15": {
-        "name_he": "ואדי ערה",
-        "name_en": "Wadi Ara"
-    },
-    "16": {
-        "name_he": "מרכז הגליל",
-        "name_en": "Center Galilee"
-    },
-    "17": {
-        "name_he": "מערב הנגב",
-        "name_en": "Western Negev"
-    },
-    "18": {
-        "name_he": "דן",
-        "name_en": "Dan"
-    },
-    "19": {
-        "name_he": "המפרץ",
-        "name_en": "HaMifratz"
-    },
-    "20": {
-        "name_he": "ירקון",
-        "name_en": "Yarkon"
-    },
-    "21": {
-        "name_he": "מערב לכיש",
-        "name_en": "Western Lakhish"
-    },
-    "22": {
-        "name_he": "הכרמל",
-        "name_en": "HaCarmel"
-    },
-    "23": {
-        "name_he": "השפלה",
-        "name_en": "Shfela (Lowlands)"
-    },
-    "24": {
-        "name_he": "מרכז הנגב",
-        "name_en": "Central Negev"
-    },
-    "25": {
-        "name_he": "בקעת בית שאן",
-        "name_en": "Beit Sha'an Valley"
-    },
-    "26": {
-        "name_he": "אילת",
-        "name_en": "Eilat"
-    },
-    "27": {
-        "name_he": "ערבה",
-        "name_en": "Arabah"
-    },
-    "28": {
-        "name_he": "צפון הגולן",
-        "name_en": "Northern Golan"
-    },
-    "29": {
-        "name_he": "בקעה",
-        "name_en": "Bika'a"
-    },
-    "32": {
-        "name_he": "ירושלים",
-        "name_en": "Jerusalem"
-    },
-    "34": {
-        "name_he": "העמקים",
-        "name_en": "HaAmakim"
-    }
+  "1": {
+    "he": "גליל עליון",
+    "en": "Upper Galilee",
+    "ru": "Верхняя Галилея",
+    "ar": "الجليلالأعلى",
+    "es": "Galil Superior"
+  },
+  "2": {
+    "he": "דרום הנגב",
+    "en": "Southern Negev",
+    "ru": "Южный Негев",
+    "ar": "جنوبالنقب",
+    "es": "Sor del Negev"
+  },
+  "3": {
+    "he": "שפלת יהודה",
+    "en": "Shfelat Yehuda",
+    "ru": "Шфелат Йегуда",
+    "ar": "شيفلات يهودا",
+    "es": "Shfelat Yehuda"
+  },
+  "4": {
+    "he": "גליל תחתון",
+    "en": "Lower Galilee",
+    "ru": "Нижняя Галилея",
+    "ar": "الجليلالأسفل",
+    "es": "Galil interior"
+  },
+  "5": {
+    "he": "מנשה",
+    "en": "Menashe",
+    "ru": "Менаше",
+    "ar": "مناشيه",
+    "es": "Menashe"
+  },
+  "6": {
+    "he": "קו העימות",
+    "en": "Confrontation Line",
+    "ru": "Линия противостояния",
+    "ar": "خطالمواجهة",
+    "es": "La linea de confrontacion"
+  },
+  "7": {
+    "he": "לכיש",
+    "en": "Lakhish",
+    "ru": "Лахиш",
+    "ar": "لاخيش",
+    "es": "Lakish"
+  },
+  "9": {
+    "he": "שרון",
+    "en": "Sharon",
+    "ru": "Шарон",
+    "ar": "شارون",
+    "es": "Sharon"
+  },
+  "10": {
+    "he": "דרום הגולן",
+    "en": "Southern Golan",
+    "ru": "Южный Голан",
+    "ar": "الجولان الجنوبي",
+    "es": "Sur del Golán"
+  },
+  "11": {
+    "he": "שומרון",
+    "en": "Samaria",
+    "ru": "Самария",
+    "ar": "شومرون",
+    "es": "Shomron"
+  },
+  "12": {
+    "he": "ים המלח",
+    "en": "Dead Sea",
+    "ru": "Мертвое море",
+    "ar": "البحرالميت",
+    "es": "Mar Muerto"
+  },
+  "13": {
+    "he": "עוטף עזה",
+    "en": "Gaza Envelope",
+    "ru": "Граница с Газой",
+    "ar": "محيطغزة",
+    "es": "Alrededor de Gaza"
+  },
+  "14": {
+    "he": "יהודה",
+    "en": "Judea",
+    "ru": "Иудея",
+    "ar": "يهودا",
+    "es": "Judea"
+  },
+  "15": {
+    "he": "ואדי ערה",
+    "en": "Wadi Ara",
+    "ru": "Вади Ара",
+    "ar": "واديعارة",
+    "es": "Vadi Arra"
+  },
+  "16": {
+    "he": "מרכז הגליל",
+    "en": "Center Galilee",
+    "ru": "Центральная Галилея",
+    "ar": "مركز الجليل",
+    "es": "Centro de Galilea"
+  },
+  "17": {
+    "he": "מערב הנגב",
+    "en": "Western Negev",
+    "ru": "запад Негев",
+    "ar": "النقب الغربي",
+    "es": "Oeste de Negev"
+  },
+  "18": {
+    "he": "דן",
+    "en": "Dan",
+    "ru": "Дан",
+    "ar": "دان",
+    "es": "Dan"
+  },
+  "19": {
+    "he": "המפרץ",
+    "en": "HaMifratz",
+    "ru": "Ха-Мифрац",
+    "ar": "همفراتس",
+    "es": "HaMifratz"
+  },
+  "20": {
+    "he": "ירקון",
+    "en": "Yarkon",
+    "ru": "Яркон",
+    "ar": "يركون",
+    "es": "Yarkon"
+  },
+  "21": {
+    "he": "מערב לכיש",
+    "en": "Western Lakhish",
+    "ru": "запад Лахиш",
+    "ar": "الغربي لاخيش",
+    "es": "Oeste de Lakish"
+  },
+  "22": {
+    "he": "הכרמל",
+    "en": "HaCarmel",
+    "ru": "Ха-Кармель",
+    "ar": "الكرمل",
+    "es": "HaCarmel"
+  },
+  "23": {
+    "he": "השפלה",
+    "en": "Shfela (Lowlands)",
+    "ru": "Шфела",
+    "ar": "الساحل",
+    "es": "Shfela"
+  },
+  "24": {
+    "he": "מרכז הנגב",
+    "en": "Central Negev",
+    "ru": "Центральный Негев",
+    "ar": "مركزالنقب",
+    "es": "Centro del Negev"
+  },
+  "25": {
+    "he": "בקעת בית שאן",
+    "en": "Beit Sha'an Valley",
+    "ru": "Долина Бейт Шеана",
+    "ar": "غوربيت شان",
+    "es": "Valle de Beit Shean"
+  },
+  "26": {
+    "he": "אילת",
+    "en": "Eilat",
+    "ru": "Эйлат",
+    "ar": "ايلات",
+    "es": "Eilat"
+  },
+  "27": {
+    "he": "ערבה",
+    "en": "Arabah",
+    "ru": "Арава",
+    "ar": "عرابا",
+    "es": "Arava"
+  },
+  "28": {
+    "he": "צפון הגולן",
+    "en": "Northern Golan",
+    "ru": "Северный Голан",
+    "ar": "الجولان الشمالي",
+    "es": "Norte del Golán"
+  },
+  "29": {
+    "he": "בקעה",
+    "en": "Bika'a",
+    "ru": "Иорданская долина",
+    "ar": "باكعا",
+    "es": "Bika'a"
+  },
+  "32": {
+    "he": "ירושלים",
+    "en": "Jerusalem",
+    "ru": "Иерусалим",
+    "ar": "أورشاليمالقدس",
+    "es": "Jerusalem"
+  },
+  "34": {
+    "he": "העמקים",
+    "en": "HaAmakim",
+    "ru": "Ха-Амаким",
+    "ar": "الجولان الشمالي",
+    "es": "HaAmakim"
+  }
 }
