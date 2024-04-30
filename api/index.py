@@ -90,8 +90,7 @@ def realtime():
     r = requests.get(f'{request.host_url}dev/random/19')
     return to_json(r.text, r.status_code)
 
-  red_alert = get_red_alert()
-  return jsonify()
+  return jsonify(get_red_alert())
 
 @app.route('/geometry')
 def geometry():
