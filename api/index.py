@@ -90,7 +90,8 @@ def realtime():
     r = requests.get(f'{request.host_url}dev/random/19')
     return to_json(r.text, r.status_code)
 
-  return jsonify(get_red_alert())
+  red_alert = get_red_alert()
+  return jsonify()
 
 @app.route('/geometry')
 def geometry():
@@ -200,6 +201,7 @@ def all_cities(area = -1):
 def clear():
   global random_alerts_area
   random_alerts_area = None
+  set_red_alert(None)
   return 'cleared', 200
 
 def get_alert_id():
