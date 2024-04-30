@@ -38,6 +38,7 @@ alert_type: int = -1
 cities: list[str] = []
 timestamp: Union[datetime, None] = None
 red_alert: Union[dict[str, Union[str, list[str]]]] = {}
+random_alerts_area: Union[int, None] = None
 
 tz = timezone('Asia/Jerusalem')
 
@@ -85,6 +86,10 @@ def fetch_cities():
 
 @app.route('/realtime')
 def realtime():
+  if random_alerts_area != None:
+    r = requests.get(f'{request.host_url}dev/random/19')
+    return to_json(r.text, r.status_code)
+
   return jsonify(get_red_alert())
 
 @app.route('/geometry')
@@ -154,6 +159,9 @@ def sync_database():
 @app.route('/dev/random')
 @app.route('/dev/random/<int:area>')
 def random_cities(area = -1):
+  global random_alerts_area
+  random_alerts_area = area
+
   with open('api/cities.json', 'r', encoding='utf8') as f:
     cities = json.loads(f.read())
 
@@ -177,14 +185,22 @@ def all_cities(area = -1):
   with open('api/cities.json', 'r', encoding='utf8') as f:
     cities = json.loads(f.read())
 
-  return jsonify({
+  result = {
     'id': 1,
     'cat': 1,
     'title': 'Rockets',
     'data': [city for city, data in cities.items() if data['area'] == area or area == -1],
     'desc': 'Enter a shelter and remain in it for 10 minutes'
-  })
+  }
 
+  set_red_alert(result)
+  return jsonify(result)
+
+@app.route('/dev/clear')
+def clear():
+  global random_alerts_area
+  random_alerts_area = None
+  return 'cleared', 200
 
 def get_alert_id():
   return alert_id
