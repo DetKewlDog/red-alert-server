@@ -11,6 +11,8 @@ from timeloop import Timeloop
 from pytz import timezone
 from colorama import Fore
 
+from typing_extensions import Union
+
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -34,8 +36,8 @@ tl = Timeloop()
 alert_id: int = -1
 alert_type: int = -1
 cities: list[str] = []
-timestamp: datetime | None = None
-red_alert: dict[str, str | list[str]] | None = {}
+timestamp: Union[datetime, None] = None
+red_alert: Union[dict[str, Union[str, list[str]]]] = {}
 
 tz = timezone('Asia/Jerusalem')
 
