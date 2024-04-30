@@ -87,7 +87,7 @@ def fetch_cities():
 @app.route('/realtime')
 def realtime():
   if random_alerts_area != None:
-    r = requests.get(f'{request.host_url}dev/random/19')
+    r = requests.get(f'{request.host_url}dev/random/{random_alerts_area}')
     return to_json(r.text, r.status_code)
 
   return jsonify(get_red_alert())
