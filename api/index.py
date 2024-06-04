@@ -203,6 +203,47 @@ def clear():
   set_red_alert(None)
   return 'cleared', 200
 
+
+@app.route('/dev/push/all')
+@app.route('/dev/push/all/<int:area>')
+def push_all_cities(area = -1):
+  r = requests.get(f'{request.host_url}dev/all/{area}')
+
+  red_alert = json.loads(r.text)
+
+  set_alert_type(int(red_alert['cat']) - 1)
+  set_alert_id(red_alert['id'])
+  set_timestamp(datetime.now(tz))
+
+  cities = get_cities()
+  [cities.append(city) for city in red_alert['data'] if city not in cities]
+  set_cities(cities)
+
+  create_alert_bundle()
+
+  r = requests.get(f'{request.host_url}dev/clear')
+  return to_json(r.text, r.status_code)
+
+@app.route('/dev/push/random')
+@app.route('/dev/push/random/<int:area>')
+def push_random_cities(area = -1):
+  r = requests.get(f'{request.host_url}dev/random/{area}')
+
+  red_alert = json.loads(r.text)
+
+  set_alert_type(int(red_alert['cat']) - 1)
+  set_alert_id(red_alert['id'])
+  set_timestamp(datetime.now(tz))
+
+  cities = get_cities()
+  [cities.append(city) for city in red_alert['data'] if city not in cities]
+  set_cities(cities)
+
+  create_alert_bundle()
+
+  r = requests.get(f'{request.host_url}dev/clear')
+  return to_json(r.text, r.status_code)
+
 def get_alert_id():
   return alert_id
 def set_alert_id(value):
