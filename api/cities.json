@@ -629,6 +629,20 @@
       35.1102
     ]
   },
+  "איזור תעשייה מילואות צפון": {
+    "id": 1562,
+    "he": "אזור תעשייה אכזיב מילואות",
+    "en": "Achziv Miluot Industrial Zone",
+    "ru": "Промзона Ахзив Милуот",
+    "ar": "المنطقة الصناعية أخزيف ميل",
+    "es": "Area Industrial Achziv Miluot",
+    "area": 6,
+    "evac_time": 0,
+    "center": [
+      33.0684,
+      35.1102
+    ]
+  },
   "אזור תעשייה אלון התבור": {
     "id": 1141,
     "he": "אזור תעשייה אלון התבור",
@@ -19107,6 +19121,818 @@
     "center": [
       31.7833,
       34.9802
+    ]
+  },
+  "ניר עם": {
+    "id": 252,
+    "he": "ניר עם",
+    "en": "Nir Am",
+    "ru": "Нир Ам",
+    "ar": "نير عام",
+    "es": "Nir Am",
+    "area": 13,
+    "countdown": 15,
+    "center": [
+      31.5184,
+      34.5805
+    ]
+  },
+  "איירפורט סיטי": {
+    "id": 1863,
+    "he": "איירפורט סיטי",
+    "en": "Airport City",
+    "ru": "Аэропорт",
+    "ar": "أيرفوفط سيتي",
+    "es": "Airport City",
+    "area": 20,
+    "countdown": 90,
+    "center": [
+      31.9887,
+      34.9123
+    ]
+  },
+  "אזור תעשייה ברקן": {
+    "id": 1933,
+    "he": "אזור תעשייה ברקן",
+    "en": "Barkan Industrial Park",
+    "ru": "Промзона Баркан",
+    "ar": "المنطقة الصناعية بركان",
+    "es": "Barkan Industrial Park",
+    "area": 11,
+    "countdown": 90,
+    "center": [
+      32.1051,
+      35.1199
+    ]
+  },
+  "צומת האלה": {
+    "id": 1934,
+    "he": "צומת האלה",
+    "en": "Ha'Ela Junction",
+    "ru": "Перекрёсток хаЭла",
+    "ar": "مفترق هائيلاه",
+    "es": "Ha'Ela Junction",
+    "area": 3,
+    "countdown": 60,
+    "center": [
+      31.6857,
+      34.948
+    ]
+  },
+  "תחנת רכבת קריית מלאכי - יואב": {
+    "id": 1937,
+    "he": "תחנת רכבת קריית מלאכי - יואב",
+    "en": "Kiryat Mal'akhi-Yoav train station",
+    "ru": "Ж/д станция Кирьят-Малахи-Йоав",
+    "ar": "محطة قطار كريات ملآخي - يوآڤ",
+    "es": "Kiryat Mal'akhi-Yoav train station",
+    "area": 7,
+    "countdown": 60,
+    "center": [
+      31.7472,
+      34.8221
+    ]
+  },
+  "רמת טראמפ": {
+    "id": 1938,
+    "he": "רמת טראמפ",
+    "en": "Ramat Trump",
+    "ru": "Рамат Трамп",
+    "ar": "رمات ترامب",
+    "es": "Ramat Trump",
+    "area": 28,
+    "countdown": 15,
+    "center": [
+      33.1328,
+      35.6897
+    ]
+  },
+  "אזור תעשייה שחק": {
+    "id": 1939,
+    "he": "אזור תעשייה שחק",
+    "en": "Shahak industrial park",
+    "ru": "Промзона Шахак",
+    "ar": "المطقة الصناعية شاحاك",
+    "es": "Shahak industrial park",
+    "area": 11,
+    "countdown": 90,
+    "center": [
+      32.475,
+      35.1797
+    ]
+  },
+  "אזור תעשייה אריאל": {
+    "id": 1942,
+    "he": "אזור תעשייה אריאל",
+    "en": "Ariel Industrial Park",
+    "ru": "Промзона Ариэль",
+    "ar": "المنطقة الصناعية اريئيل",
+    "es": "Ariel Industrial Park",
+    "area": 11,
+    "countdown": 90,
+    "center": [
+      32.094,
+      35.1234
+    ]
+  },
+  "צומת הגוש": {
+    "id": 1943,
+    "he": "צומת הגוש",
+    "en": "Gush Etzion Junction",
+    "ru": "Перекрёсток Гуш-Эцион",
+    "ar": "مفترق هاچوش",
+    "es": "Gush Etzion Junction",
+    "area": 14,
+    "countdown": 90,
+    "center": [
+      31.646,
+      35.1305
+    ]
+  },
+  "פקיעין החדשה": {
+    "id": 1945,
+    "he": "פקיעין החדשה",
+    "en": "Peki'in HaHadasha",
+    "ru": "Новый Пкиин",
+    "ar": "البقيعة الجديدة",
+    "es": "Peki'in HaHadasha",
+    "area": 6,
+    "countdown": 15,
+    "center": [
+      32.9882,
+      35.3158
+    ]
+  },
+  "גבעון החדשה": {
+    "id": 1949,
+    "he": "גבעון החדשה",
+    "en": "Givon HaHadasha",
+    "ru": "Новый Гваон",
+    "ar": "جبعون هحداشاه",
+    "es": "Givon HaHadasha",
+    "area": 32,
+    "countdown": 90,
+    "center": [
+      31.8481,
+      35.1575
+    ]
+  },
+  "כרם רעים": {
+    "id": 1955,
+    "he": "כרם רעים",
+    "en": "Kerem Reim",
+    "ru": "Керем-Реим",
+    "ar": "كيرم رعيم",
+    "es": "Kerem Reim",
+    "area": 11,
+    "countdown": 90,
+    "center": [
+      31.9583,
+      35.138
+    ]
+  },
+  "מיני ישראל - נחשון": {
+    "id": 1956,
+    "he": "מיני ישראל - נחשון",
+    "en": "Mini Israel - Nachshon",
+    "ru": "Мини Израиль - Нахшон",
+    "ar": "ميني إسرائيل - ناحشون",
+    "es": "Mini Israel - Nachshon",
+    "area": 3,
+    "countdown": 90,
+    "center": [
+      31.8425,
+      34.9685
+    ]
+  },
+  "אזור תעשייה טמרה": {
+    "id": 1959,
+    "he": "אזור תעשייה טמרה",
+    "en": "Tamra Industiral Park",
+    "ru": "Промзона Тамра",
+    "ar": "المنطقة الصناعية طمرة",
+    "es": "Tamra Industiral Park",
+    "area": 16,
+    "countdown": 60,
+    "center": [
+      32.833,
+      35.1642
+    ]
+  },
+  "כפר הנוער קריית יערים": {
+    "id": 1963,
+    "he": "כפר הנוער קריית יערים",
+    "en": "Kiryat Ye'arim Youth Village",
+    "ru": "Молодежная деревня Кирьят-Яарим",
+    "ar": "كفار هنوعر كريات يعاريم",
+    "es": "Kiryat Ye'arim Youth Village",
+    "area": 3,
+    "countdown": 90,
+    "center": [
+      31.8126,
+      35.1049
+    ]
+  },
+  "אזור תעשייה רגמ": {
+    "id": 1968,
+    "he": "אזור תעשייה רגמ",
+    "en": "Ramla, Regional Council Gezer, Regional Council Hevel Modi'in Industrial Park",
+    "ru": "Промзона \"Регем\" (Рамле-Гезер-Модиин)",
+    "ar": "المنطقة الصناعية رجم",
+    "es": "Ramla, Regional Council Gezer, Regional Council Hevel Modi'in Industrial Park",
+    "area": 23,
+    "countdown": 90,
+    "center": [
+      31.9255,
+      34.8975
+    ]
+  },
+  "צפת - עכברה": {
+    "id": 2005,
+    "he": "צפת - עכברה",
+    "en": "Safed - 'Akbara",
+    "ru": "Цфат - Ахбара",
+    "ar": "صفد - عكبرة",
+    "es": "Safed - 'Akbara",
+    "area": 1,
+    "countdown": 30,
+    "center": [
+      32.9415,
+      35.4975
+    ]
+  },
+  "צפת - נוף כנרת": {
+    "id": 2006,
+    "he": "צפת - נוף כנרת",
+    "en": "Safed - Nof ha-Kinneret",
+    "ru": "Цфат - Ноф Киннерет",
+    "ar": "صفد - نوف كينيرت",
+    "es": "Safed - Nof ha-Kinneret",
+    "area": 1,
+    "countdown": 30,
+    "center": [
+      32.9526,
+      35.5298
+    ]
+  },
+  "בית העלמין החדש נהריה": {
+    "id": 2007,
+    "he": "בית העלמין החדש נהריה",
+    "en": "Nahariya Cemetery",
+    "ru": "Кладбище Нагария",
+    "ar": "مقبرة نهريا",
+    "es": "Nahariya Cemetery",
+    "area": 6,
+    "countdown": 30,
+    "center": [
+      33.005,
+      35.1463
+    ]
+  },
+  "חוות אירוח גורן": {
+    "id": 2008,
+    "he": "חוות אירוח גורן",
+    "en": "Goren Farm Guesthouse",
+    "ru": "Гостевая Ферма Горен",
+    "ar": "مركز استضافة جورن",
+    "es": "Goren Farm Guesthouse",
+    "area": 6,
+    "countdown": 0,
+    "center": [
+      33.0488,
+      35.2201
+    ]
+  },
+  "חניון הנתיב מהיר": {
+    "id": 2011,
+    "he": "חניון הנתיב מהיר",
+    "en": "Fast Lane Parking Lot",
+    "ru": "Парковка Ха-Натив Ха-Махир",
+    "ar": "موقف المسار السريع",
+    "es": "Fast Lane Parking Lot",
+    "area": 23,
+    "countdown": 90,
+    "center": [
+      32.0022,
+      34.8421
+    ]
+  },
+  "מפעל אגריגדה": {
+    "id": 2013,
+    "he": "מפעל אגריגדה",
+    "en": "Agrigada Factory",
+    "ru": "Завод Агригеда",
+    "ar": "مصنع اجريجاده",
+    "es": "Agrigada Factory",
+    "area": 7,
+    "countdown": 60,
+    "center": [
+      31.8141,
+      34.8252
+    ]
+  },
+  "חוף קליה": {
+    "id": 2014,
+    "he": "חוף קליה",
+    "en": "Kalia Beach",
+    "ru": "Пляж Хоф Калия",
+    "ar": "شاطئ قاليا",
+    "es": "Playa Kalia",
+    "area": 12,
+    "countdown": 90,
+    "center": [
+      31.7609,
+      35.5027
+    ]
+  },
+  "נאות קדומים": {
+    "id": 2017,
+    "he": "נאות קדומים",
+    "en": "Neot Kedumim",
+    "ru": "Неот Кдумим",
+    "ar": "ناؤوت كدوميم",
+    "es": "Neot Kedumim",
+    "area": 20,
+    "countdown": 90,
+    "center": [
+      31.9479,
+      34.9728
+    ]
+  },
+  "חוף זיקים": {
+    "id": 2019,
+    "he": "חוף זיקים",
+    "en": "Zikim Beach",
+    "ru": "Пляж Хоф Зиким",
+    "ar": "شاطئ زيكيم",
+    "es": "Playa Zikim",
+    "area": 13,
+    "countdown": 15,
+    "center": [
+      31.6164,
+      34.508
+    ]
+  },
+  "מלון אחוזת ירדן": {
+    "id": 2020,
+    "he": "מלון אחוזת ירדן",
+    "en": "Yarden Estate Boutique Hotel",
+    "ru": "Отель Ахузат Ярден",
+    "ar": "فندق أحوزات ياردين",
+    "es": "Yarden Estate Boutique Hotel",
+    "area": 1,
+    "countdown": 30,
+    "center": [
+      33.0452,
+      35.5735
+    ]
+  },
+  "לב החולה": {
+    "id": 2021,
+    "he": "לב החולה",
+    "en": "Lev Ha-Hula",
+    "ru": "Лев Ха-Холе",
+    "ar": "ليب الحولة",
+    "es": "Lev Ha-Hula",
+    "area": 6,
+    "countdown": 0,
+    "center": [
+      33.1103,
+      35.5819
+    ]
+  },
+  "שער הגיא": {
+    "id": 2022,
+    "he": "שער הגיא",
+    "en": "Sha’ar HaGai",
+    "ru": "Шаар Ха-Гай",
+    "ar": "شاعر هجاي",
+    "es": "Sha’ar HaGai",
+    "area": 3,
+    "countdown": 90,
+    "center": [
+      31.8152,
+      35.0229
+    ]
+  },
+  "אזור תעשייה קריית ביאליק": {
+    "id": 2023,
+    "he": "אזור תעשייה קריית ביאליק",
+    "en": "Kiryat Bialik Industrial Zone",
+    "ru": "Промзона Кирьят Бялик",
+    "ar": "المنطقة الصناعية كريات بياليك",
+    "es": "Kiryat Bialik Industrial Zone",
+    "area": 19,
+    "countdown": 60,
+    "center": [
+      32.8671,
+      35.0988
+    ]
+  },
+  "אבו נוור": {
+    "id": 2024,
+    "he": "אבו נוור",
+    "en": "Abu-Nuwar",
+    "ru": "Абу Навер",
+    "ar": "أبو نور",
+    "es": "Abu-Nuwar",
+    "area": 14,
+    "countdown": 90,
+    "center": [
+      31.7621,
+      35.2938
+    ]
+  },
+  "פארק תעשיות מגדל עוז": {
+    "id": 2025,
+    "he": "פארק תעשיות מגדל עוז",
+    "en": "Industrial Park Migdal Oz",
+    "ru": "Парк \"Таасиот Мигдаль Оз\"",
+    "ar": "البارك الصناعي ميجدال عوز",
+    "es": "Industrial Park Migdal Oz",
+    "area": 14,
+    "countdown": 90,
+    "center": [
+      31.641,
+      35.1515
+    ]
+  },
+  "אזור תעשייה כפר יונה": {
+    "id": 2026,
+    "he": "אזור תעשייה כפר יונה",
+    "en": "Kfar Yona Industrial Zone",
+    "ru": "Промзона Кфар Йона",
+    "ar": "المنطقة الصناعية كفر يونه",
+    "es": "Kfar Yona Industrial Zone",
+    "area": 9,
+    "countdown": 90,
+    "center": [
+      32.3191,
+      34.9103
+    ]
+  },
+  "מלון פרא": {
+    "id": 2181,
+    "he": "מלון פרא",
+    "en": "Pereh Hotel",
+    "ru": "Отель Пере",
+    "ar": "فندق بيرا",
+    "es": "Pereh Hotel",
+    "area": 28,
+    "countdown": 15,
+    "center": [
+      33.0122,
+      35.6514
+    ]
+  },
+  "רפטינג נהר הירדן": {
+    "id": 2182,
+    "he": "רפטינג נהר הירדן",
+    "en": "Jordan River Rafting",
+    "ru": "Рафтинг Река Иордан",
+    "ar": "رافتينج ناهر هياردين",
+    "es": "Jordan River Rafting",
+    "area": 1,
+    "countdown": 30,
+    "center": [
+      33.0257,
+      35.628
+    ]
+  },
+  "טבחה": {
+    "id": 2183,
+    "he": "טבחה",
+    "en": "Tabgha",
+    "ru": "Табха",
+    "ar": "طابغا",
+    "es": "Tabgha",
+    "area": 1,
+    "countdown": 60,
+    "center": [
+      32.8715,
+      35.547
+    ]
+  },
+  "כפר נחום": {
+    "id": 2184,
+    "he": "כפר נחום",
+    "en": "Kfar Nahum",
+    "ru": "Кфар Нахум",
+    "ar": "كفار ناحوم",
+    "es": "Kfar Nahum",
+    "area": 1,
+    "countdown": 30,
+    "center": [
+      32.8842,
+      35.5775
+    ]
+  },
+  "חוף אמנון": {
+    "id": 2185,
+    "he": "חוף אמנון",
+    "en": "Amnon Beach",
+    "ru": "Пляж Амнон",
+    "ar": "شاطئ أمنون",
+    "es": "Playa Amnon",
+    "area": 1,
+    "countdown": 30,
+    "center": [
+      32.8912,
+      35.5934
+    ]
+  },
+  "חוף כינר, דוגה, דוגית": {
+    "id": 2186,
+    "he": "חוף כינר, דוגה, דוגית",
+    "en": "Kinar, Duga, Dugit Beach",
+    "ru": "Пляж Кинар, Дуга, Дугит",
+    "ar": "شاطئ كينار، دوجا، دوجيت",
+    "es": "Playa Kinar, Duga, Dugit",
+    "area": 10,
+    "countdown": 15,
+    "center": [
+      32.8567,
+      35.6473
+    ]
+  },
+  "חוף גולן, צאלון": {
+    "id": 2187,
+    "he": "חוף גולן, צאלון",
+    "en": "Golan, Tzeelon Beach",
+    "ru": "Пляж Голан, Цеэлон",
+    "ar": "شاطئ جولان، تسيألون",
+    "es": "Playa Golan, Tzeelon",
+    "area": 10,
+    "countdown": 15,
+    "center": [
+      32.8425,
+      35.6508
+    ]
+  },
+  "חוף כורסי, לבנון, חלוקים": {
+    "id": 2188,
+    "he": "חוף כורסי, לבנון, חלוקים",
+    "en": "Kursi, Lavnun, Halukim Beach",
+    "ru": "Пляж Курси, Лавнун, Халуким",
+    "ar": "شاطئ كرسي، نيبانون، حالوكيم",
+    "es": "Playa Kursi, Lavnun, Halukim",
+    "area": 10,
+    "countdown": 15,
+    "center": [
+      32.8202,
+      35.646
+    ]
+  },
+  "חוף גופרה": {
+    "id": 2189,
+    "he": "חוף גופרה",
+    "en": "Gofra Beach",
+    "ru": "Пляж Гофра",
+    "ar": "شاطئ جوفراه",
+    "es": "Playa Gofra",
+    "area": 10,
+    "countdown": 15,
+    "center": [
+      32.8042,
+      35.6429
+    ]
+  },
+  "חוף סוסיתא": {
+    "id": 2190,
+    "he": "חוף סוסיתא",
+    "en": "Susita Beach",
+    "ru": "Пляж Сусита",
+    "ar": "شاطئ سوسيتا",
+    "es": "Playa Susita",
+    "area": 10,
+    "countdown": 15,
+    "center": [
+      32.7897,
+      35.6398
+    ]
+  },
+  "מתחם סקי גלבוע": {
+    "id": 2191,
+    "he": "מתחם סקי גלבוע",
+    "en": "Gilboa Ski Resort",
+    "ru": "Гильбоа Ски Резорт",
+    "ar": "موقع التزلج جلبوع",
+    "es": "Gilboa Ski Resort",
+    "area": 34,
+    "countdown": 60,
+    "center": [
+      32.5528,
+      35.3352
+    ]
+  },
+  "בית העלמין החדש עכו": {
+    "id": 2192,
+    "he": "בית העלמין החדש עכו",
+    "en": "Akko New Cemetery",
+    "ru": "Новое Кладбище Акко",
+    "ar": "المقبرة الجديدة عكا",
+    "es": "Akko New Cemetery",
+    "area": 1,
+    "countdown": 30,
+    "center": [
+      32.9146,
+      35.1358
+    ]
+  },
+  "צומת בנימינה": {
+    "id": 2193,
+    "he": "צומת בנימינה",
+    "en": "Binyamina Junction",
+    "ru": "Цомет Биньямина",
+    "ar": "مفرق بنيامينا",
+    "es": "Binyamina Junction",
+    "area": 5,
+    "countdown": 90,
+    "center": [
+      32.5173,
+      34.929
+    ]
+  },
+  "גני חוגה": {
+    "id": 2194,
+    "he": "גני חוגה",
+    "en": "Ganey Hugga",
+    "ru": "Ганей Хугга",
+    "ar": "جاني حوجاه",
+    "es": "Ganey Hugga",
+    "area": 25,
+    "countdown": 60,
+    "center": [
+      32.5173,
+      35.5392
+    ]
+  },
+  "אזור תעשייה גדרה": {
+    "id": 2195,
+    "he": "אזור תעשייה גדרה",
+    "en": "Gedera Industrial Area",
+    "ru": "Индустриальная Зона, Гедера",
+    "ar": "المنطقة الصناعية جديرا",
+    "es": "Gedera Industrial Area",
+    "area": 7,
+    "countdown": 60,
+    "center": [
+      31.7995,
+      34.7677
+    ]
+  },
+  "מלון סיקס סנסס שחרות": {
+    "id": 2196,
+    "he": "מלון סיקס סנסס שחרות",
+    "en": "Six Senses Shaharut Hotel",
+    "ru": "Отель Сикс Сенсес Шахарут",
+    "ar": "فندق سيكي سينت شحاروت",
+    "es": "Six Senses Shaharut Hotel",
+    "area": 27,
+    "countdown": 90,
+    "center": [
+      29.9165,
+      35.0028
+    ]
+  },
+  "מתחם \"חנה וסע\" שפיים": {
+    "id": 2198,
+    "he": "מתחם \"חנה וסע\" שפיים",
+    "en": "Shfayim \"Haneh Ve'sa\" Compound",
+    "ru": "Шфайим, комплекс \"Хне ве-Са\"",
+    "ar": "موقع، \"أوقف وسافر\" شفاييم",
+    "es": "Shfayim \"Haneh Ve'sa\" Compound",
+    "area": 9,
+    "countdown": 90,
+    "center": [
+      32.2132,
+      34.8344
+    ]
+  },
+  "בית עלמין מורשה": {
+    "id": 2200,
+    "he": "בית עלמין מורשה",
+    "en": "Morasha Cemetery",
+    "ru": "Кладбище Мораша",
+    "ar": "مقبرة موراشاه",
+    "es": "Morasha Cemetery",
+    "area": 18,
+    "countdown": 90,
+    "center": [
+      32.1206,
+      34.8549
+    ]
+  },
+  "נבי שועייב": {
+    "id": 2201,
+    "he": "נבי שועייב",
+    "en": "Nabi Shu'ayb",
+    "ru": "Наби Шуайеб",
+    "ar": "النبي شعيب",
+    "es": "Nabi Shu'ayb",
+    "area": 4,
+    "countdown": 60,
+    "center": [
+      32.8058,
+      35.4522
+    ]
+  },
+  "תחנת רכבת כפר ברוך": {
+    "id": 2202,
+    "he": "תחנת רכבת כפר ברוך",
+    "en": "Kfar Baruch train station",
+    "ru": "Железнодорожная Станция Кфар Барух",
+    "ar": "محطة القطار كفارباروخ",
+    "es": "Kfar Baruch train station",
+    "area": 34,
+    "countdown": 60,
+    "center": [
+      32.6476,
+      35.2086
+    ]
+  },
+  "מתחם שביל התפוזים": {
+    "id": 2203,
+    "he": "מתחם שביל התפוזים",
+    "en": "Shvil HaTapuzim Compound",
+    "ru": "Комплекс \"Швиль Ха-Тапузим\"",
+    "ar": "موقع شبيا هتبوزيم",
+    "es": "Shvil HaTapuzim Compound",
+    "area": 5,
+    "countdown": 90,
+    "center": [
+      32.4597,
+      34.9407
+    ]
+  },
+  "כפר הנוקדים": {
+    "id": 2204,
+    "he": "כפר הנוקדים",
+    "en": "Kfar HaNokdim",
+    "ru": "Кфар ха-Нокдим",
+    "ar": "كفار هنوكديم",
+    "es": "Kfar HaNokdim",
+    "area": 2,
+    "countdown": 90,
+    "center": [
+      31.3048,
+      35.2696
+    ]
+  },
+  "צומת דבירה": {
+    "id": 2205,
+    "he": "צומת דבירה",
+    "en": "Dvira Junction",
+    "ru": "Цомет Двира",
+    "ar": "مفرق دبيراه",
+    "es": "Dvira Junction",
+    "area": 24,
+    "countdown": 45,
+    "center": [
+      31.4223,
+      34.7864
+    ]
+  },
+  "אזור תעשייה רבדים": {
+    "id": 2207,
+    "he": "אזור תעשייה רבדים",
+    "en": "Revadim Industrial Zone",
+    "ru": "Промзона Ревадим",
+    "ar": "لمنطقة الصناعية رفاديم",
+    "es": "Revadim Industrial Zone",
+    "area": 7,
+    "countdown": 60,
+    "center": [
+      31.7855,
+      34.822
+    ]
+  },
+  "חוף ניצנים": {
+    "id": 2208,
+    "he": "חוף ניצנים",
+    "en": "Nitzanim Beach",
+    "ru": "Пляж Хоф Ницаним",
+    "ar": "شاطئ نيتسانيم",
+    "es": "Playa Nitzanim",
+    "area": 21,
+    "countdown": 45,
+    "center": [
+      31.7457,
+      34.6015
+    ]
+  },
+  "חוף בצת": {
+    "id": 2209,
+    "he": "חוף בצת",
+    "en": "Betzet Beach",
+    "ru": "Пляж Хоф Бецет",
+    "ar": "شاطئ بتست",
+    "es": "Playa Betzet",
+    "area": 6,
+    "countdown": 0,
+    "center": [
+      33.0801,
+      35.1066
     ]
   }
 }
