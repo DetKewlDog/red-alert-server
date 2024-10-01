@@ -60,7 +60,7 @@ def fetch_cities():
 
 @app.route('/realtime')
 def realtime():
-  return relay_request('https://www.kore.co.il/redAlert.json')
+  return relay_request('https://api.tzevaadom.co.il/notifications')
 
 @app.route('/geometry')
 def geometry():
