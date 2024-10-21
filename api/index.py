@@ -58,6 +58,10 @@ def main():
 def fetch_cities():
   return send_file('./cities.json')
 
+@app.route('/areas')
+def fetch_areas():
+  return send_file('./areas.json')
+
 @app.route('/realtime')
 def realtime():
   return relay_request('https://api.tzevaadom.co.il/notifications')
