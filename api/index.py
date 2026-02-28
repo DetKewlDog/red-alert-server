@@ -68,7 +68,8 @@ def realtime():
 
 @app.route('/geometry')
 def geometry():
-  return relay_request('https://www.tzevaadom.co.il/static/polygons.json')
+  # return relay_request('https://www.tzevaadom.co.il/static/polygons.json')
+  return send_file('./polygons.json')
 
 @app.route('/history')
 @app.route('/history/<id>')
